@@ -1,11 +1,12 @@
 import type { IconMap, SocialLink, Site } from '@/types'
 
 export const SITE: Site = {
+  name: 'Multisensory Intelligence',
   title: 'Multisensory Intelligence',
   description:
     'The Multisensory Intelligence research group studies the foundations of multisensory artificial intelligence to create human-AI symbiosis across scales and sensory mediums. ',
   href: 'https://mit-mi.github.io/',
-  author: 'MIT Multisensory Intelligence',
+  author: 'Multisensory Intelligence',
   locale: 'en-US',
   featuredPostCount: 2,
   postsPerPage: 3,
