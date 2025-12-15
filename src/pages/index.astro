@@ -4,45 +4,60 @@ import Link from '@/components/Link.astro'
 import PageHead from '@/components/PageHead.astro'
 import { buttonVariants } from '@/components/ui/button'
 import { SITE } from '@/consts'
+import ProjectCard from '@/components/ProjectCard.astro'
 import Layout from '@/layouts/Layout.astro'
-import { getRecentPosts } from '@/lib/data-utils'
+import { getRecentPosts, getAllProjects } from '@/lib/data-utils'
 
 const blog = await getRecentPosts(SITE.featuredPostCount)
+const projects = await getAllProjects()
 ---
 
-<Layout class="max-w-3xl">
+<Layout class="">
   <PageHead slot="head" title="Home" />
-  <section class="rounded-lg border">
-    <div class="flex flex-col space-y-1.5 p-6">
-      <h3 class="text-3xl leading-none font-medium">Multisensory Intelligence</h3>
+  <div class="grid grid-cols-1 gap-6 lg:grid-cols-2">
+    <!-- Left column -->
+    <div class="flex flex-col gap-6">
+      <section class="rounded-lg border">
+        <div class="flex flex-col space-y-1.5 p-6">
+          <h3 class="text-3xl leading-none font-medium">Multisensory Intelligence</h3>
+        </div>
+        <div class="p-6 pt-0 gap-6 flex flex-col">
+          <p class="text-muted-foreground text-sm">
+            The Multisensory Intelligence research group studies the foundations of multisensory artificial intelligence to create human-AI symbiosis across scales and sensory mediums. The new AI technologies we develop are able to learn and interact with the world through integrating diverse sensory channels, significantly increasing their capability and flexibility. Our group further draws upon multidisciplinary backgrounds to integrate the theory and practice of AI into many aspects of the human experience, including enhancing our digital productivity, developing new technologies for creative expression, and improving our holistic health and wellbeing. Finally, our group carefully considers the responsible deployment of AI technologies, including quantifying and mitigating real-world societal concerns around bias, fairness, and privacy, participatory co-design with stakeholders, and developing policies around the real-world deployment of AI foundation models.
+          </p>
+        </div>
+      </section>
+      <section class="flex flex-col gap-y-4">
+        <h2 class="text-2xl font-medium">Latest posts</h2>
+        <ul class="flex flex-col gap-y-4">
+          {
+            blog.map((post) => (
+              <li>
+                <BlogCard entry={post} />
+              </li>
+            ))
+          }
+        </ul>
+        <div class="flex justify-center">
+          <Link
+            href="/blog"
+            class={buttonVariants({ variant: 'ghost' }) + ' group'}
+          >
+            See all posts <span
+              class="ml-1.5 transition-transform group-hover:translate-x-1"
+              >&rarr;</span
+            >
+          </Link>
+        </div>
+      </section>
     </div>
-    <div class="p-6 pt-0">
-      <p class="text-muted-foreground text-sm">
-        The Multisensory Intelligence research group studies the foundations of multisensory artificial intelligence to create human-AI symbiosis across scales and sensory mediums. The new AI technologies we develop are able to learn and interact with the world through integrating diverse sensory channels, significantly increasing their capability and flexibility. Our group further draws upon multidisciplinary backgrounds to integrate the theory and practice of AI into many aspects of the human experience, including enhancing our digital productivity, developing new technologies for creative expression, and improving our holistic health and wellbeing. Finally, our group carefully considers the responsible deployment of AI technologies, including quantifying and mitigating real-world societal concerns around bias, fairness, and privacy, participatory co-design with stakeholders, and developing policies around the real-world deployment of AI foundation models.
-      </p>
-    </div>
-  </section>
-  <section class="flex flex-col gap-y-4">
-    <h2 class="text-2xl font-medium">Latest posts</h2>
-    <ul class="flex flex-col gap-y-4">
-      {
-        blog.map((post) => (
-          <li>
-            <BlogCard entry={post} />
-          </li>
-        ))
-      }
-    </ul>
-    <div class="flex justify-center">
-      <Link
-        href="/blog"
-        class={buttonVariants({ variant: 'ghost' }) + ' group'}
-      >
-        See all posts <span
-          class="ml-1.5 transition-transform group-hover:translate-x-1"
-          >&rarr;</span
-        >
-      </Link>
-    </div>
-  </section>
+
+    <!-- Right column (projects) -->
+    <section>
+      <h2 class="mb-4 text-2xl font-medium">Example Projects Listing</h2>
+      <div class="flex flex-col gap-4">
+        {projects.map((project) => <ProjectCard project={project} />)}
+      </div>
+    </section>
+  </div>
 </Layout>
