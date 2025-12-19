@@ -99,6 +99,13 @@ export async function getPostsByPerson(
   return posts.filter((post) => post.data.people?.includes(personId))
 }
 
+export async function getProjectsByPerson(
+  personId: string,
+): Promise<CollectionEntry<'projects'>[]> {
+  const projects = await getAllProjects()
+  return projects.filter((project) => project.data.people?.includes(personId))
+}
+
 export async function getPostsByTag(
   tag: string,
 ): Promise<CollectionEntry<'blog'>[]> {

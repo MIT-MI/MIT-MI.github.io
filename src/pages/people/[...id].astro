@@ -1,10 +1,15 @@
 ---
-import PersonCard from '@/components/PersonCard.astro'
 import BlogCard from '@/components/BlogCard.astro'
 import Breadcrumbs from '@/components/Breadcrumbs.astro'
 import PageHead from '@/components/PageHead.astro'
+import PersonCard from '@/components/PersonCard.astro'
+import ProjectCard from '@/components/ProjectCard.astro'
 import Layout from '@/layouts/Layout.astro'
-import { getAllPeople, getPostsByPerson } from '@/lib/data-utils'
+import {
+  getAllPeople,
+  getPostsByPerson,
+  getProjectsByPerson,
+} from '@/lib/data-utils'
 import { render } from 'astro:content'
 
 export async function getStaticPaths() {
@@ -18,6 +23,7 @@ export async function getStaticPaths() {
 const { person } = Astro.props
 const { Content } = await render(person)
 const personPosts = await getPostsByPerson(person.id)
+const personProjects = await getProjectsByPerson(person.id)
 ---
 
 <Layout class="max-w-3xl">
@@ -38,25 +44,37 @@ const personPosts = await getPostsByPerson(person.id)
     <PersonCard person={person} />
   </section>
   <div class="prose">
-    <Content/>
+    <Content />
   </div>
-  <section class="flex flex-col gap-y-4">
-    <h2 class="text-2xl font-medium">Projects by {person.data.name}</h2>
-    {
-      personPosts.length > 0 ? (
+  {
+    personProjects.length > 0 && (
+      <section class="flex flex-col gap-y-4">
+        <h2 class="text-2xl font-medium">Projects by {person.data.name}</h2>
         <ul class="flex flex-col gap-4">
-          {personPosts
-            .map((post) => (
-              <li>
-                <BlogCard entry={post} />
-              </li>
-            ))}
+          {personProjects.map((project) => (
+            <li>
+              <ProjectCard project={project} />
+            </li>
+          ))}
         </ul>
-      ) : (
-        <p class="text-muted-foreground">
-          No posts available from this person.
-        </p>
-      )
-    }
-  </section>
+      </section>
+    )
+  }
+  {
+    personPosts.length > 0 && (
+      <section class="flex flex-col gap-y-4">
+        <h2 class="text-2xl font-medium">
+          Updates involving {person.data.name}
+        </h2>
+
+        <ul class="flex flex-col gap-4">
+          {personPosts.map((post) => (
+            <li>
+              <BlogCard entry={post} />
+            </li>
+          ))}
+        </ul>
+      </section>
+    )
+  }
 </Layout>

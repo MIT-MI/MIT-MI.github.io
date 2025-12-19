@@ -1,6 +1,8 @@
 ---
 import Link from '@/components/Link.astro'
+import AvatarComponent from '@/components/ui/avatar'
 import { Badge } from '@/components/ui/badge'
+import { parsePeople } from '@/lib/data-utils'
 import { formatDate } from '@/lib/utils'
 import { Icon } from 'astro-icon/components'
 import { Image } from 'astro:assets'
@@ -11,15 +13,15 @@ interface Props {
 }
 
 const { project } = Astro.props
+const people = await parsePeople(project.data.people ?? [])
 ---
 
 <div
-  class="hover:bg-muted rounded-xl border p-4 transition-colors duration-300 ease-in-out bg-background"
+  class="hover:ring-primary bg-background rounded-xl border p-4 transition-shadow duration-300 ease-in-out hover:cursor-pointer hover:ring-2"
 >
   <Link
-    href={project.data.link}
+    href={`/${project.collection}/${project.id}`}
     class="flex flex-col gap-4 sm:flex-row"
-    external
   >
     {
       project.data.image && (
@@ -34,26 +36,48 @@ const { project } = Astro.props
         </div>
       )
     }
-    <div class="grow">
+    <div class="grow flex flex-col gap-y-1">
       <h3 class="mb-1 text-lg font-medium">
         {project.data.name}
       </h3>
       <p class="text-muted-foreground mb-2 text-sm">
         {project.data.description}
       </p>
+      <div
+        class="text-muted-foreground mb-2 flex flex-wrap items-center gap-x-2 text-xs"
+      >
+        {
+          people.length > 0 && (
+            <>
+              {people.map((person) => (
+                <div class="flex items-center gap-x-1.5">
+                  <AvatarComponent
+                    client:load
+                    src={person.avatar}
+                    alt={person.name}
+                    fallback={person.name[0]}
+                    className="size-5 rounded-full"
+                  />
+                  <span>{person.name}</span>
+                </div>
+              ))}
+            </>
+          )
+        }
+      </div>
       {
         project.data.startDate && (
-          <p class="text-muted-foreground/70 mb-2 flex items-center gap-x-1.5 text-xs">
-            <span class="flex items-center gap-x-1.5">
-              <Icon name="lucide:calendar" class="size-3" />
-              <span>
-                {formatDate(project.data.startDate)}
-                {project.data.endDate
-                  ? ` → ${formatDate(project.data.endDate)}`
-                  : ' → Present'}
+            <p class="text-muted-foreground/70 mb-2 flex items-center gap-x-1.5 text-xs">
+              <span class="flex items-center gap-x-1.5">
+                <Icon name="lucide:calendar" class="size-3" />
+                <span>
+                  {formatDate(project.data.startDate)}
+                  {project.data.endDate
+                    ? ` → ${formatDate(project.data.endDate)}`
+                    : ' → Present'}
+                </span>
               </span>
-            </span>
-          </p>
+            </p>
         )
       }
       {
@@ -63,6 +87,16 @@ const { project } = Astro.props
               <Badge variant="muted">{tag}</Badge>
             ))}
           </div>
+        )
+      }
+      {
+        project.data.publication && (
+            <p class="mb-2 flex items-center gap-x-1.5 text-xs">
+              <span class="flex items-center gap-x-1.5">
+                <Icon name="lucide:book" class="size-3" />
+                <span>{project.data.publication.venue}</span>
+              </span>
+            </p>
         )
       }
     </div>

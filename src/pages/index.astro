@@ -96,7 +96,17 @@ const projects = await getAllProjects()
 
     <!-- Right column (projects) -->
     <section class="lg:overflow-y-auto lg:min-h-0 lg:-m-1 lg:p-1">
-      <h2 class="mb-4 text-2xl font-medium">Projects</h2>
+      <div class="flex flex-row gap-2">
+        <h2 class="text-2xl font-medium">Projects</h2>
+        <Link
+          href="/projects"
+          class={buttonVariants({ variant: 'ghost' }) + ' group'}
+        >
+          See all <span class="transition-transform group-hover:translate-x-1"
+            >&rarr;</span
+          >
+        </Link>
+      </div>
       <div class="flex flex-col gap-4">
         {projects.map((project) => <ProjectCard project={project} />)}
       </div>
