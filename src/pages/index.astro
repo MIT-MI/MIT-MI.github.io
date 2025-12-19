@@ -2,33 +2,86 @@
 import BlogCard from '@/components/BlogCard.astro'
 import Link from '@/components/Link.astro'
 import PageHead from '@/components/PageHead.astro'
+import { PeopleAvatarGrid } from '@/components/PeopleAvatarGrid'
+import ProjectCard from '@/components/ProjectCard.astro'
 import { buttonVariants } from '@/components/ui/button'
 import { SITE } from '@/consts'
-import ProjectCard from '@/components/ProjectCard.astro'
 import Layout from '@/layouts/Layout.astro'
-import { getRecentPosts, getAllProjects } from '@/lib/data-utils'
+import { getAllPeople, getAllProjects, getRecentPosts } from '@/lib/data-utils'
 
 const blog = await getRecentPosts(SITE.featuredPostCount)
+const people = await getAllPeople()
 const projects = await getAllProjects()
 ---
 
-<Layout class="">
+<Layout class="lg:overflow-hidden">
   <PageHead slot="head" title="Home" />
-  <div class="grid grid-cols-1 gap-6 lg:grid-cols-2">
+  <div class="grid grid-cols-1 gap-4 lg:grid-cols-[1.2fr_1fr] lg:h-full lg:min-h-0">
     <!-- Left column -->
-    <div class="flex flex-col gap-6">
-      <section class="rounded-lg border">
-        <div class="flex flex-col space-y-1.5 p-6">
-          <h3 class="text-3xl leading-none font-medium">Multisensory Intelligence</h3>
+    <div class="flex flex-col gap-4 lg:overflow-auto lg:min-h-0">
+    <section class="flex flex-col gap-4 rounded-lg border p-4 bg-background">
+        <div class="flex flex-col space-y-1.5">
+          <h3 class="text-3xl leading-none font-medium py-2">
+            Multisensory Intelligence
+          </h3>
         </div>
-        <div class="p-6 pt-0 gap-6 flex flex-col">
-          <p class="text-muted-foreground text-sm">
-            The Multisensory Intelligence research group studies the foundations of multisensory artificial intelligence to create human-AI symbiosis across scales and sensory mediums. The new AI technologies we develop are able to learn and interact with the world through integrating diverse sensory channels, significantly increasing their capability and flexibility. Our group further draws upon multidisciplinary backgrounds to integrate the theory and practice of AI into many aspects of the human experience, including enhancing our digital productivity, developing new technologies for creative expression, and improving our holistic health and wellbeing. Finally, our group carefully considers the responsible deployment of AI technologies, including quantifying and mitigating real-world societal concerns around bias, fairness, and privacy, participatory co-design with stakeholders, and developing policies around the real-world deployment of AI foundation models.
+        <div class="flex flex-col gap-2">
+          <p class="text-muted-foreground text-md">
+            We study the foundations of <span class="text-foreground font-bold"
+              >multisensory artificial intelligence</span
+            > to create <span class="text-foreground font-bold"
+              >human-AI symbiosis</span
+            > across scales and sensory mediums. The new AI technologies we develop
+            are able to <span class="text-foreground font-bold"
+              >learn and interact with the world</span
+            > through integrating diverse sensory channels, significantly increasing
+            their capability and flexibility.
+          </p>
+          <p class="text-muted-foreground text-md">
+            Our group further draws upon multidisciplinary backgrounds to
+            integrate the theory and practice of AI into many aspects of the
+            human experience, including <span class="text-foreground font-bold"
+              >enhancing our digital productivity, developing new technologies
+              for creative expression, and improving our holistic health and
+              wellbeing
+            </span>. Finally, our group carefully considers the <span
+              class="text-foreground font-bold"
+              >responsible deployment of AI technologies</span
+            >, including quantifying and mitigating real-world societal concerns
+            around bias, fairness, and privacy, participatory co-design with
+            stakeholders, and developing policies around the real-world
+            deployment of AI foundation models.
           </p>
         </div>
       </section>
-      <section class="flex flex-col gap-y-4">
-        <h2 class="text-2xl font-medium">Latest posts</h2>
+      <section class="flex flex-col gap-1 rounded-lg border p-4 bg-background lg:flex-1 min-h-36">
+        <div class="flex flex-row gap-2 shrink-0">
+          <h2 class="text-2xl font-medium">People</h2>
+          <Link
+            href="/people"
+            class={buttonVariants({ variant: 'ghost' }) + ' group'}
+          >
+            See all <span class="transition-transform group-hover:translate-x-1"
+              >&rarr;</span
+            >
+          </Link>
+        </div>
+        <div class="flex-1 min-h-0">
+          <PeopleAvatarGrid client:load people={people} className="h-full"/>
+        </div>
+      </section>
+      <section class="flex flex-col gap-1">
+        <div class="flex flex-row gap-2">
+          <h2 class="text-2xl font-medium">Updates</h2>
+          <Link
+            href="/blog"
+            class={buttonVariants({ variant: 'ghost' }) + ' group'}
+          >
+            See all <span class="transition-transform group-hover:translate-x-1"
+              >&rarr;</span
+            >
+          </Link>
+        </div>
         <ul class="flex flex-col gap-y-4">
           {
             blog.map((post) => (
@@ -38,23 +91,12 @@ const projects = await getAllProjects()
             ))
           }
         </ul>
-        <div class="flex justify-center">
-          <Link
-            href="/blog"
-            class={buttonVariants({ variant: 'ghost' }) + ' group'}
-          >
-            See all posts <span
-              class="ml-1.5 transition-transform group-hover:translate-x-1"
-              >&rarr;</span
-            >
-          </Link>
-        </div>
       </section>
     </div>
 
     <!-- Right column (projects) -->
-    <section>
-      <h2 class="mb-4 text-2xl font-medium">Example Projects Listing</h2>
+    <section class="lg:overflow-auto lg:min-h-0">
+      <h2 class="mb-4 text-2xl font-medium">Projects</h2>
       <div class="flex flex-col gap-4">
         {projects.map((project) => <ProjectCard project={project} />)}
       </div>

@@ -8,7 +8,7 @@ export const SITE: Site = {
   href: 'https://mit-mi.github.io/',
   author: 'Multisensory Intelligence',
   locale: 'en-US',
-  featuredPostCount: 2,
+  featuredPostCount: 1,
   postsPerPage: 3,
 }
 

@@ -20,13 +20,13 @@ interface Props {
 
 const { entry } = Astro.props
 const formattedDate = formatDate(entry.data.date)
-const readTime = await getCombinedReadingTime(entry.id)
+// const readTime = await getCombinedReadingTime(entry.id)
 const authors = await parsePeople(entry.data.authors ?? [])
-const subpostCount = !isSubpost(entry.id) ? await getSubpostCount(entry.id) : 0
+// const subpostCount = !isSubpost(entry.id) ? await getSubpostCount(entry.id) : 0
 ---
 
 <div
-  class="hover:bg-muted/50 rounded-xl border p-4 transition-colors duration-300 ease-in-out"
+  class="hover:bg-muted rounded-xl border p-4 transition-colors duration-300 ease-in-out bg-background"
 >
   <Link
     href={`/${entry.collection}/${entry.id}`}
@@ -48,7 +48,7 @@ const subpostCount = !isSubpost(entry.id) ? await getSubpostCount(entry.id) : 0
 
     <div class="grow">
       <h3 class="mb-1 text-lg font-medium">{entry.data.title}</h3>
-      <p class="text-muted-foreground mb-2 text-sm">{entry.data.description}</p>
+      <!-- <p class="text-muted-foreground mb-2 text-sm">{entry.data.description}</p> -->
 
       <div
         class="text-muted-foreground mb-2 flex flex-wrap items-center gap-x-2 text-xs"
@@ -73,9 +73,9 @@ const subpostCount = !isSubpost(entry.id) ? await getSubpostCount(entry.id) : 0
           )
         }
         <span>{formattedDate}</span>
-        <Separator orientation="vertical" className="h-4!" />
-        <span>{readTime}</span>
-        {
+        <!-- <Separator orientation="vertical" className="h-4!" />
+        <span>{readTime}</span> -->
+        <!-- {
           subpostCount > 0 && (
             <>
               <Separator orientation="vertical" className="h-4!" />
@@ -85,10 +85,10 @@ const subpostCount = !isSubpost(entry.id) ? await getSubpostCount(entry.id) : 0
               </span>
             </>
           )
-        }
+        } -->
       </div>
 
-      {
+      <!-- {
         entry.data.tags && (
           <div class="flex flex-wrap gap-2">
             {entry.data.tags.map((tag) => (
@@ -99,7 +99,7 @@ const subpostCount = !isSubpost(entry.id) ? await getSubpostCount(entry.id) : 0
             ))}
           </div>
         )
-      }
+      } -->
     </div>
   </Link>
 </div>

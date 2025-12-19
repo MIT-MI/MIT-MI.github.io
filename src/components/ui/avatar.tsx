@@ -48,27 +48,25 @@ function AvatarFallback({
   )
 }
 
-const AvatarComponent: React.FC<AvatarComponentProps> = ({
-  src,
-  alt,
-  fallback,
-  className,
-}) => {
-  return (
-    <Avatar className={className}>
-      <AvatarImage src={src} alt={alt} className="object-cover object-top"/>
-      <AvatarFallback>{fallback}</AvatarFallback>
-    </Avatar>
-  )
-}
-
-export default AvatarComponent
-
-interface AvatarComponentProps {
+interface AvatarComponentProps extends React.ComponentPropsWithoutRef<'span'> {
   src?: string
   alt?: string
   fallback: string
   className?: string
 }
+
+const AvatarComponent = React.forwardRef<HTMLSpanElement, AvatarComponentProps>(
+  ({ src, alt, fallback, className, ...props }, ref) => {
+    return (
+      <Avatar ref={ref} className={className} {...props}>
+        <AvatarImage src={src} alt={alt} className="object-cover object-top" />
+        <AvatarFallback>{fallback}</AvatarFallback>
+      </Avatar>
+    )
+  },
+)
+AvatarComponent.displayName = 'AvatarComponent'
+
+export default AvatarComponent
 
 export { Avatar, AvatarImage, AvatarFallback }
