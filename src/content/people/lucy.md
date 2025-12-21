@@ -1,4 +1,4 @@
 ---
 name: "Lucy Zhao"
-title: "Ph.D. Student (EECS)"
+title: "Graduate Student"
 ---
