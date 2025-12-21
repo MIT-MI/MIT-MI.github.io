@@ -1,4 +1,5 @@
 ---
 name: "Fangneng Zhan"
-title: "Member"
+title: "Postdoc"
+website: "https://fnzhan.com/"
 ---
