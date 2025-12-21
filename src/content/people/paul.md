@@ -2,10 +2,7 @@
 name: "Paul Liang"
 title: "Faculty"
 avatar: "https://dam-prod.media.mit.edu/thumb/2024/10/02/paul-liang-headshot.jpg.800x800.jpg"
-scholar: "https://scholar.google.com/citations?hl=en&user=pKf5LtQAAAAJ"
 website: "https://pliang279.github.io/"
-github: "https://github.com/pliang279"
-twitter: "https://twitter.com/pliang279"
 ---
 
 Paul Liang is an Assistant Professor at the MIT Media Lab and the Department of Electrical Engineering and Computer Science. He is the founding director of the Multisensory Intelligence research group, which studies the foundations of multisensory artificial intelligence to create human-AI symbiosis across scales and sensory mediums, enhancing productivity, creativity, and wellbeing.
