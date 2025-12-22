@@ -1,5 +1,5 @@
 opentouch: 
-  title: "OPENTOUCH: Bringing Full-Hand Touch to Real-World Interaction"
+  title: "OpenTouch: Bringing Full-Hand Touch to Real-World Interaction"
   date: 2025-12-18
   authors:
     - Yuxin Ray Song
@@ -19,18 +19,20 @@ opentouch:
     - Paul Pu Liang
   journal: arXiv preprint
   link: https://arxiv.org/pdf/2512.16842
-multimodal-fusion-balancing:
-  title: "Multimodal Fusion Balancing Through Game-Theoretic Regularization"
+
+qoq-med:
+  title: "QoQ-Med: Building Multimodal Clinical Foundation Models with Domain-Aware GRPO Training"
   date: 2025-11
   authors: 
-  - Konstantinos Kontras
-  - Thomas Strypsteen
-  - Christos Chatzichristos
+  - Wei Dai
+  - Peilin Chen
+  - Chanakya Ekbote
   - Paul Pu Liang
-  - Matthew Blaschko
-  - Maarten De Vos
   journal: "NeurIPS 2025"
-  link: https://arxiv.org/pdf/2411.07335
+  link: https://arxiv.org/pdf/2506.00711
+  annotation: "(oral)"
+  image: "./images/qoqmed.png"
+  
 what-one-cannot-two-can:
   title: "What One Cannot, Two Can: Two-Layer Transformers Provably Represent Induction Heads on Any-Order Markov Chains"
   date: 2025-11
@@ -46,18 +48,7 @@ what-one-cannot-two-can:
   link: https://arxiv.org/pdf/2508.07208
   annotation: "(spotlight)"
   image: "./images/what-one-cannot.png"
-qoq-med:
-  title: "QoQ-Med: Building Multimodal Clinical Foundation Models with Domain-Aware GRPO Training"
-  date: 2025-11
-  authors: 
-  - Wei Dai
-  - Peilin Chen
-  - Chanakya Ekbote
-  - Paul Pu Liang
-  journal: "NeurIPS 2025"
-  link: https://arxiv.org/pdf/2506.00711
-  annotation: "(oral)"
-  image: "./images/qoqmed.png"
+
 mimeqa:
   title: "MimeQA: Towards socially-intelligent nonverbal foundation models"
   date: 2025-11
@@ -70,6 +61,20 @@ mimeqa:
   journal: "NeurIPS 2025"
   link: https://arxiv.org/pdf/2502.16671
   image: "./images/mimeqa.gif"
+
+multimodal-fusion-balancing:
+  title: "Multimodal Fusion Balancing Through Game-Theoretic Regularization"
+  date: 2025-11
+  authors: 
+  - Konstantinos Kontras
+  - Thomas Strypsteen
+  - Christos Chatzichristos
+  - Paul Pu Liang
+  - Matthew Blaschko
+  - Maarten De Vos
+  journal: "NeurIPS 2025"
+  link: https://arxiv.org/pdf/2411.07335
+
 fairgrpo:
   title: "FairGRPO: Towards Fair Reasoning Foundation Models for Clinical Diagnosis"
   date: 2025-10-20
@@ -80,8 +85,9 @@ fairgrpo:
   - Paul Pu Liang
   journal: "NeurIPS 2025 Workshop"
   link: https://openreview.net/pdf?id=D0SgzgdBjo
+  
 page-4d:
-  title: "Page-4d: Disentangled pose and geometry estimation for 4d perception"
+  title: "Page-4D: Disentangled Pose and Geometry Estimation for 4D Perception"
   date: 2025-10-20
   authors: 
   - Kaichen Zhou
@@ -94,8 +100,9 @@ page-4d:
   - Mengyu Wang
   journal: "arXiv preprint"
   link: https://arxiv.org/pdf/2510.17568
+
 human-behavior-atlas:
-  title: "Human behavior atlas: Benchmarking unified psychological and social behavior understanding"
+  title: "Human Behavior Atlas: Benchmarking Unified Psychological and Social Behavior Understanding"
   date: 2025-10-06
   authors: 
   - Keane Ong
@@ -110,7 +117,8 @@ human-behavior-atlas:
   - Erik Cambria
   - Paul Pu Liang
   journal: "arXiv preprint"
-  link: https://arxiv.org/pdf/2510.04899?
+  link: https://arxiv.org/pdf/2510.04899
+
 dialogues-with-ai:
   title: "Dialogues with AI Reduce Beliefs in Misinformation but Build No Lasting Discernment Skills"
   date: 2025-10-02
@@ -122,6 +130,7 @@ dialogues-with-ai:
   - Pattie Maes
   journal: "arXiv preprint"
   link: https://arxiv.org/pdf/2510.01537
+
 radar:
   title: "RADAR: A Reasoning-Guided Attribution Framework for Explainable Visual Data Analysis"
   date: 2025-08-23
@@ -132,7 +141,8 @@ radar:
   - Balaji Vasan Srinivasan
   - Paul Pu Liang
   journal: "arXiv preprint"
-  link: https://arxiv.org/pdf/2508.16850?
+  link: https://arxiv.org/pdf/2508.16850
+
 learn-globally-speak-locally:
   title: "Learn globally, speak locally: Bridging the gaps in multilingual reasoning"
   date: 2025-07-07
@@ -147,6 +157,7 @@ learn-globally-speak-locally:
   - Paul Pu Liang
   journal: "arXiv preprint"
   link: https://arxiv.org/pdf/2507.05418
+
 climb:
   title: "CLIMB: Data Foundations for Large Scale Multimodal Clinical Foundation Models"
   date: 2025-07
@@ -161,6 +172,7 @@ climb:
   journal: "ICML 2025"
   link: https://arxiv.org/pdf/2503.07667
   image: "./images/climb.png"
+
 understanding-the-emergence-of-multimodal-representation-alignment:
   title: "Understanding the emergence of multimodal representation alignment"
   date: 2025-07
@@ -172,6 +184,7 @@ understanding-the-emergence-of-multimodal-representation-alignment:
   journal: "ICML 2025"
   link: https://arxiv.org/pdf/2502.16282?
   image: "./images/understanding-alignment.png"
+
 mem1:
   title: "MEM1: Learning to Synergize Memory and Reasoning for Efficient Long-Horizon Agents"
   date: 2025-06-18
@@ -188,6 +201,7 @@ mem1:
   journal: "arXiv preprint"
   link: https://arxiv.org/pdf/2506.15841
   image: "./images/mem1.gif"
+
 position-simulating-society:
   title: "Position: Simulating Society Requires Simulating Thought"
   date: 2025-06-08
@@ -207,6 +221,7 @@ position-simulating-society:
   - Kent Larson
   journal: NeurIPS 2025
   link: https://arxiv.org/pdf/2506.06958
+
 puzzleworld:
   title: "PuzzleWorld: A Benchmark for Multimodal, Open-Ended Reasoning in Puzzlehunts"
   date: 2025-06-06
@@ -226,6 +241,7 @@ puzzleworld:
   journal: "arXiv preprint"
   link: https://arxiv.org/pdf/2506.06211?
   image: "./images/puzzleworld.png"
+
 smellnet:
   title: "SMELLNET: A Large-scale Dataset for Real-world Smell Recognition"
   date: 2025-05-30
@@ -237,6 +253,7 @@ smellnet:
   journal: "arXiv preprint"
   link: https://arxiv.org/pdf/2506.00239?
   image: "./images/smellnet.gif"
+
 interactive-sketchpad:
   title: "Interactive Sketchpad: A Multimodal Tutoring System for Collaborative, Visual Problem-Solving"
   date: 2025-04-26
@@ -244,9 +261,10 @@ interactive-sketchpad:
   - Steven-Shine Chen
   - Jimin Lee
   - Paul Pu Liang
-  journal: "CHI Conference on Human Factors in Computing Systems"
+  journal: "CHI 2025 Late-Breaking Work"
   link: https://arxiv.org/pdf/2503.16434?
   image: "./images/sketchpad.gif"
+
 fits-like-a-flex-glove:
   title: "Fits like a Flex-Glove: Automatic Design of Personalized FPCB-Based Tactile Sensing Gloves"
   date: 2025-04-26
@@ -260,5 +278,5 @@ fits-like-a-flex-glove:
   - Yiyue Luo
   - Antonio Torralba
   - Wojciech Matusik
-  journal: "CHI Conference on Human Factors in Computing Systems"
+  journal: "CHI 2025 Late-Breaking Work"
   link: https://arxiv.org/pdf/2503.06349
