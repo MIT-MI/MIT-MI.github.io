@@ -1,4 +1,4 @@
 ---
 name: "Amanda Zwerling"
-title: "Administrative Assistant"
+title: "Administrative assistant"
 ---
