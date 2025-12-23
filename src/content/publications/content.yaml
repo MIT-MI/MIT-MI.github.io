@@ -302,7 +302,7 @@ compositionality:
   - Paul Pu Liang
   journal: "ICLR 2025"
   annotation: "(spotlight)"
-  link: "https://arxiv.org/abs/2410.16719"
+  link: https://arxiv.org/abs/2410.16719
   image: 
 
 osatlas:
@@ -322,7 +322,7 @@ osatlas:
   - Yu Qiao
   journal: "ICLR 2025"
   annotation: "(spotlight)"
-  link: "https://arxiv.org/abs/2410.23218"
+  link: https://arxiv.org/abs/2410.23218
   image:
 
 videowebarena:
@@ -338,7 +338,7 @@ videowebarena:
   - Rogerio Bonatti
   - Kazuhito Koishida
   journal: "ICLR 2025"
-  link: "https://arxiv.org/abs/2410.19100"
+  link: https://arxiv.org/abs/2410.19100
   image: 
 
 teasergen:
@@ -352,7 +352,7 @@ teasergen:
   - Taylor Berg-Kirkpatrick
   - Hao-Wen Dong
   journal: "ICLR 2025"
-  link: "https://arxiv.org/abs/2410.05586"
+  link: https://arxiv.org/abs/2410.05586
   image: 
 
 bigbench:
@@ -362,5 +362,5 @@ bigbench:
   - 442 authors including Paul Pu Liang
   journal: "ICLR 2025, TMLR 2023"
   annotation: "(finalist for outstanding certification)"
-  link: "https://openreview.net/forum?id=uyTL5Bvosj"
+  link: https://openreview.net/forum?id=uyTL5Bvosj
   image: 
