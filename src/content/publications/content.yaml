@@ -303,7 +303,6 @@ compositionality:
   journal: "ICLR 2025"
   annotation: "(spotlight)"
   link: https://arxiv.org/abs/2410.16719
-  image: 
 
 osatlas:
   title: "OS-ATLAS: A Foundation Action Model for Generalist GUI Agents"
@@ -323,7 +322,6 @@ osatlas:
   journal: "ICLR 2025"
   annotation: "(spotlight)"
   link: https://arxiv.org/abs/2410.23218
-  image:
 
 videowebarena:
   title: "VideoWebArena: Evaluating Long Context Multimodal Agents with Video Understanding Web Tasks"
@@ -339,7 +337,6 @@ videowebarena:
   - Kazuhito Koishida
   journal: "ICLR 2025"
   link: https://arxiv.org/abs/2410.19100
-  image: 
 
 teasergen:
   title: "TeaserGen: Generating Teasers for Long Documentaries"
@@ -353,7 +350,6 @@ teasergen:
   - Hao-Wen Dong
   journal: "ICLR 2025"
   link: https://arxiv.org/abs/2410.05586
-  image: 
 
 bigbench:
   title: "Beyond the Imitation Game: Quantifying and Extrapolating the Capabilities of Language Models"
@@ -363,4 +359,3 @@ bigbench:
   journal: "ICLR 2025, TMLR 2023"
   annotation: "(finalist for outstanding certification)"
   link: https://openreview.net/forum?id=uyTL5Bvosj
-  image: 
