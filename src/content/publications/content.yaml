@@ -293,7 +293,7 @@ fits-like-a-flex-glove:
   link: https://arxiv.org/pdf/2503.06349
 
 compositionality:
-  title: Progressive Compositionality In Text-to-Image Generative Models
+  title: "Progressive Compositionality In Text-to-Image Generative Models"
   date: 2025-04
   authors:
   - Evans Han
@@ -306,7 +306,7 @@ compositionality:
   image: 
 
 osatlas:
-  title: OS-ATLAS: A Foundation Action Model for Generalist GUI Agents
+  title: "OS-ATLAS: A Foundation Action Model for Generalist GUI Agents"
   date: 2025-04
   authors:
   - Zhiyong Wu
@@ -326,7 +326,7 @@ osatlas:
   image:
 
 videowebarena:
-  title: VideoWebArena: Evaluating Long Context Multimodal Agents with Video Understanding Web Tasks
+  title: "VideoWebArena: Evaluating Long Context Multimodal Agents with Video Understanding Web Tasks"
   date:
   authors:
   - Lawrence Jang
@@ -342,7 +342,7 @@ videowebarena:
   image: 
 
 teasergen:
-  title: TeaserGen: Generating Teasers for Long Documentaries
+  title: "TeaserGen: Generating Teasers for Long Documentaries"
   date: 2025-04
   authors:
   - Weihan Xu
@@ -356,7 +356,7 @@ teasergen:
   image: 
 
 bigbench:
-  title: Beyond the Imitation Game: Quantifying and Extrapolating the Capabilities of Language Models
+  title: "Beyond the Imitation Game: Quantifying and Extrapolating the Capabilities of Language Models"
   date: 2025-04
   authors:
   - 442 authors including Paul Pu Liang
