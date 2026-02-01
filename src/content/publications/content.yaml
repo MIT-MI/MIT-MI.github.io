@@ -106,9 +106,24 @@ dialogues-with-ai:
   link: https://arxiv.org/abs/2510.01537
   image: "./images/dialog.png"
 
+psv:
+  title: "Propose, Solve, Verify: Self-Play Through Formal Verification"
+  date: 2025-12
+  authors:
+    - Alex Wilf
+    - Pranjal Aggarwal
+    - Bryan Parno
+    - Daniel Fried
+    - Louis-Philippe Morency
+    - Paul Pu Liang
+    - Sean Welleck
+  journal: "arXiv preprint"
+  link: https://arxiv.org/abs/2512.18160
+  image: "./images/psv.png"
+
 opentouch:
   title: "OpenTouch: Bringing Full-Hand Touch to Real-World Interaction"
-  date: 2025-12-18
+  date: 2025-12
   authors:
     - Ray Song
     - Jinzhou Li
@@ -229,7 +244,7 @@ fairgrpo:
 
 learn-globally-speak-locally:
   title: "Learn Globally, Speak Locally: Bridging the Gaps in Multilingual Reasoning"
-  date: 2025-07-07
+  date: 2025-07
   authors: 
   - Jaedong Hwang
   - Kumar Tanmay
@@ -272,7 +287,7 @@ understanding-the-emergence-of-multimodal-representation-alignment:
 
 interactive-sketchpad:
   title: "Interactive Sketchpad: A Multimodal Tutoring System for Collaborative, Visual Problem-Solving"
-  date: 2025-04-26
+  date: 2025-04
   authors: 
   - Steven-Shine Chen
   - Jimin Lee
@@ -283,7 +298,7 @@ interactive-sketchpad:
 
 fits-like-a-flex-glove:
   title: "Fits like a Flex-Glove: Automatic Design of Personalized FPCB-Based Tactile Sensing Gloves"
-  date: 2025-04-26
+  date: 2025-04
   authors: 
   - Devin Murphy
   - Yichen Li
