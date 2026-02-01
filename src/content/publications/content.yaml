@@ -1,3 +1,12 @@
+vision:
+  title: "A Vision for Multisensory Intelligence: Sensing, Science, and Synergy"
+  date: 2026-01
+  authors:
+  - Paul Pu Liang
+  journal: "arxiv preprint"
+  link: https://arxiv.org/abs/2601.04563
+  image: "./images/vision.png"
+
 mem1:
   title: "MEM1: Learning to Synergize Memory and Reasoning for Efficient Long-Horizon Agents"
   date: 2026-04
@@ -14,6 +23,20 @@ mem1:
   journal: "ICLR 2026"
   link: https://arxiv.org/abs/2506.15841
   image: "./images/mem1.gif"
+
+smellnet:
+  title: "SmellNet: A Large-scale Dataset for Real-world Smell Recognition"
+  date: 2026-04
+  authors: 
+  - Dewei Feng
+  - David Dai
+  - Carol Li
+  - Alistair Pernigo
+  - Yunge Wen
+  - Paul Pu Liang
+  journal: "ICLR 2026"
+  link: https://arxiv.org/abs/2506.00239
+  image: "./images/smellnet.gif"
 
 puzzleworld:
   title: "PuzzleWorld: A Benchmark for Multimodal, Open-Ended Reasoning in Puzzlehunts"
@@ -34,18 +57,6 @@ puzzleworld:
   journal: "ICLR 2026"
   link: https://arxiv.org/abs/2506.06211
   image: "./images/puzzleworld.png"
-
-smellnet:
-  title: "SmellNet: A Large-scale Dataset for Real-world Smell Recognition"
-  date: 2026-04
-  authors: 
-  - Dewei Feng
-  - Carol Li
-  - David Dai
-  - Paul Pu Liang
-  journal: "ICLR 2026"
-  link: https://arxiv.org/abs/2506.00239
-  image: "./images/smellnet.gif"
 
 human-behavior-atlas:
   title: "Human Behavior Atlas: Benchmarking Unified Psychological and Social Behavior Understanding"
