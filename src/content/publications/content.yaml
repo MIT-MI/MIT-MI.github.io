@@ -1,4 +1,101 @@
-opentouch: 
+mem1:
+  title: "MEM1: Learning to Synergize Memory and Reasoning for Efficient Long-Horizon Agents"
+  date: 2026-04
+  authors: 
+  - Zijian Zhou
+  - Ao Qu
+  - Zhaoxuan Wu
+  - Sunghwan Kim
+  - Alok Prakash
+  - Daniela Rus
+  - Jinhua Zhao
+  - Bryan Kian Hsiang Low
+  - Paul Pu Liang
+  journal: "ICLR 2026"
+  link: https://arxiv.org/abs/2506.15841
+  image: "./images/mem1.gif"
+
+puzzleworld:
+  title: "PuzzleWorld: A Benchmark for Multimodal, Open-Ended Reasoning in Puzzlehunts"
+  date: 2026-04
+  authors: 
+  - Hengzhi Li
+  - Brendon Jiang
+  - Alexander Naehu
+  - Regan Song
+  - Justin Zhang
+  - Megan Tjandrasuwita
+  - Chanakya Ekbote
+  - Steven-Shine Chen
+  - Adithya Balachandran
+  - David Dai
+  - Rebecca Chang
+  - Paul Pu Liang
+  journal: "ICLR 2026"
+  link: https://arxiv.org/abs/2506.06211
+  image: "./images/puzzleworld.png"
+
+smellnet:
+  title: "SmellNet: A Large-scale Dataset for Real-world Smell Recognition"
+  date: 2026-04
+  authors: 
+  - Dewei Feng
+  - Carol Li
+  - David Dai
+  - Paul Pu Liang
+  journal: "ICLR 2026"
+  link: https://arxiv.org/abs/2506.00239
+  image: "./images/smellnet.gif"
+
+human-behavior-atlas:
+  title: "Human Behavior Atlas: Benchmarking Unified Psychological and Social Behavior Understanding"
+  date: 2026-04
+  authors: 
+  - Keane Ong
+  - David Dai
+  - Carol Li
+  - Dewei Feng
+  - Hengzhi Li
+  - Jingyao Wu
+  - Jiaee Cheong
+  - Rui Mao
+  - Gianmarco Mengaldo
+  - Erik Cambria
+  - Paul Pu Liang
+  journal: "ICLR 2026"
+  link: https://arxiv.org/abs/2510.04899
+  image: "./images/hba.png"
+
+page-4d:
+  title: "Page-4D: Disentangled Pose and Geometry Estimation for 4D Perception"
+  date: 2026-04
+  authors: 
+  - Kaichen Zhou
+  - Yuhan Wang
+  - Grace Chen
+  - Xinhai Chang
+  - Gaspard Beaudouin
+  - Fangneng Zhan
+  - Paul Pu Liang
+  - Mengyu Wang
+  journal: "ICLR 2026"
+  link: https://arxiv.org/abs/2510.17568
+  image: "./images/page4d.gif"
+
+dialogues-with-ai:
+  title: "Dialogues with AI Reduce Beliefs in Misinformation but Build No Lasting Discernment Skills"
+  date: 2026-04
+  authors: 
+  - Anku Rani
+  - Valdemar Danry
+  - Paul Pu Liang
+  - Andrew B Lippman
+  - Pattie Maes
+  journal: "CHI 2026"
+  link: https://arxiv.org/abs/2510.01537
+  image: "./images/dialog.png"
+
+opentouch:
   title: "OpenTouch: Bringing Full-Hand Touch to Real-World Interaction"
   date: 2025-12-18
   authors:
@@ -107,27 +204,6 @@ regen:
   link: https://arxiv.org/abs/2505.18880
   image: "./images/regen.png"
 
-position-simulating-society:
-  title: "Position: Simulating Society Requires Simulating Thought"
-  date: 2025-12
-  authors: 
-  - Chance Jiajie Li
-  - Jiayi Wu
-  - Zhenze Mo
-  - Ao Qu
-  - Yuhan Tang
-  - Kaiya Ivy Zhao
-  - Yulu Gan
-  - Jie Fan
-  - Jiangbo Yu
-  - Jinhua Zhao
-  - Paul Pu Liang
-  - Luis Alonso
-  - Kent Larson
-  journal: "NeurIPS 2025"
-  link: https://arxiv.org/abs/2506.06958
-  image: "./images/simulatesociety.png"
-
 fairgrpo:
   title: "FairGRPO: Towards Fair Reasoning Foundation Models for Clinical Diagnosis"
   date: 2025-12
@@ -139,67 +215,6 @@ fairgrpo:
   journal: "arXiv preprint"
   link: https://arxiv.org/abs/2510.19893
   image: "./images/fairgrpo.png"
-  
-page-4d:
-  title: "Page-4D: Disentangled Pose and Geometry Estimation for 4D Perception"
-  date: 2025-10-20
-  authors: 
-  - Kaichen Zhou
-  - Yuhan Wang
-  - Grace Chen
-  - Xinhai Chang
-  - Gaspard Beaudouin
-  - Fangneng Zhan
-  - Paul Pu Liang
-  - Mengyu Wang
-  journal: "arXiv preprint"
-  link: https://arxiv.org/abs/2510.17568
-  image: "./images/page4d.gif"
-
-human-behavior-atlas:
-  title: "Human Behavior Atlas: Benchmarking Unified Psychological and Social Behavior Understanding"
-  date: 2025-10-06
-  authors: 
-  - Keane Ong
-  - David Dai
-  - Carol Li
-  - Dewei Feng
-  - Hengzhi Li
-  - Jingyao Wu
-  - Jiaee Cheong
-  - Rui Mao
-  - Gianmarco Mengaldo
-  - Erik Cambria
-  - Paul Pu Liang
-  journal: "arXiv preprint"
-  link: https://arxiv.org/abs/2510.04899
-  image: "./images/hba.png"
-
-dialogues-with-ai:
-  title: "Dialogues with AI Reduce Beliefs in Misinformation but Build No Lasting Discernment Skills"
-  date: 2025-10-02
-  authors: 
-  - Anku Rani
-  - Valdemar Danry
-  - Paul Pu Liang
-  - Andrew B Lippman
-  - Pattie Maes
-  journal: "arXiv preprint"
-  link: https://arxiv.org/abs/2510.01537
-  image: "./images/dialog.png"
-
-radar:
-  title: "RADAR: A Reasoning-Guided Attribution Framework for Explainable Visual Data Analysis"
-  date: 2025-08-23
-  authors: 
-  - Anku Rani
-  - Aparna Garimella
-  - Apoorv Saxena
-  - Balaji Vasan Srinivasan
-  - Paul Pu Liang
-  journal: "arXiv preprint"
-  link: https://arxiv.org/abs/2508.16850
-  image: "./images/radar.png"
 
 learn-globally-speak-locally:
   title: "Learn Globally, Speak Locally: Bridging the Gaps in Multilingual Reasoning"
@@ -243,55 +258,6 @@ understanding-the-emergence-of-multimodal-representation-alignment:
   journal: "ICML 2025"
   link: https://arxiv.org/abs/2502.16282?
   image: "./images/alignment.png"
-
-mem1:
-  title: "MEM1: Learning to Synergize Memory and Reasoning for Efficient Long-Horizon Agents"
-  date: 2025-06-18
-  authors: 
-  - Zijian Zhou
-  - Ao Qu
-  - Zhaoxuan Wu
-  - Sunghwan Kim
-  - Alok Prakash
-  - Daniela Rus
-  - Jinhua Zhao
-  - Bryan Kian Hsiang Low
-  - Paul Pu Liang
-  journal: "arXiv preprint"
-  link: https://arxiv.org/abs/2506.15841
-  image: "./images/mem1.gif"
-
-puzzleworld:
-  title: "PuzzleWorld: A Benchmark for Multimodal, Open-Ended Reasoning in Puzzlehunts"
-  date: 2025-06-06
-  authors: 
-  - Hengzhi Li
-  - Brendon Jiang
-  - Alexander Naehu
-  - Regan Song
-  - Justin Zhang
-  - Megan Tjandrasuwita
-  - Chanakya Ekbote
-  - Steven-Shine Chen
-  - Adithya Balachandran
-  - David Dai
-  - Rebecca Chang
-  - Paul Pu Liang
-  journal: "arXiv preprint"
-  link: https://arxiv.org/abs/2506.06211
-  image: "./images/puzzleworld.png"
-
-smellnet:
-  title: "SmellNet: A Large-scale Dataset for Real-world Smell Recognition"
-  date: 2025-05-30
-  authors: 
-  - Dewei Feng
-  - Carol Li
-  - David Dai
-  - Paul Pu Liang
-  journal: "arXiv preprint"
-  link: https://arxiv.org/abs/2506.00239
-  image: "./images/smellnet.gif"
 
 interactive-sketchpad:
   title: "Interactive Sketchpad: A Multimodal Tutoring System for Collaborative, Visual Problem-Solving"
