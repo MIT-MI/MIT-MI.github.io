@@ -21,13 +21,7 @@ const people = defineCollection({
     z.object({
       name: z.string(),
       title: z.string(),
-      avatar: z
-        .union([
-          z.string().url(), // External URLs
-          z.string().startsWith('/'), // Public folder paths
-          image(), // Local images (processed by Astro)
-        ])
-        .optional(),
+      avatar: image().optional(),
       email: z.string().email().optional(),
       website: z.string().url().optional(),
       github: z.string().url().optional(),

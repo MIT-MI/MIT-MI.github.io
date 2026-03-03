@@ -50,9 +50,11 @@ export function shuffleArray<T>(array: T[]): T[] {
 }
 
 /**
- * Extract avatar source from either a string URL or Astro image object.
+ * Extract avatar URL from an Astro image object or pass through strings.
+ * Returns fallback if avatar is undefined.
  */
-export function getAvatarSrc(avatar: string | { src: string } | undefined): string {
-  const src = avatar ? typeof avatar === 'string' ? avatar : avatar.src : undefined
-  return src || '/static/avatar-fallback.png'
+export function getAvatarSrc(avatar: { src: string } | string | undefined): string {
+  if (!avatar) return '/static/avatar-fallback.png'
+  if (typeof avatar === 'string') return avatar
+  return avatar.src
 }

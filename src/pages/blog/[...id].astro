@@ -23,7 +23,7 @@ import {
   isSubpost,
   parsePeople,
 } from '@/lib/data-utils'
-import { formatDate, getAvatarSrc } from '@/lib/utils'
+import { formatDate } from '@/lib/utils'
 import { Icon } from 'astro-icon/components'
 import { Image } from 'astro:assets'
 import { render } from 'astro:content'
@@ -137,8 +137,8 @@ const tocSections = await getTOCSections(currentPostId)
               <div class="flex w-full items-center justify-center gap-x-2 py-2 sm:w-fit sm:px-2 sm:py-0 first:sm:pl-0 last:sm:pr-0">
                 {authors.map((author) => (
                   <div class="flex items-center gap-x-1.5">
-                    <Image
-                      src={getAvatarSrc(author.avatar)}
+                    <img
+                      src={author.avatar}
                       alt={author.name}
                       width={20}
                       height={20}

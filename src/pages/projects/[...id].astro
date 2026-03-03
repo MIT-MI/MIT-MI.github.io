@@ -7,7 +7,7 @@ import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import Layout from '@/layouts/Layout.astro'
 import { parsePeople } from '@/lib/data-utils'
-import { formatDate, getAvatarSrc } from '@/lib/utils'
+import { formatDate } from '@/lib/utils'
 import { Icon } from 'astro-icon/components'
 import { Image } from 'astro:assets'
 import { getCollection, render } from 'astro:content'
@@ -87,8 +87,8 @@ const people = await parsePeople(project.data.people ?? [])
                 {people.map((person) => (
                   <div class="flex items-center gap-x-1.5">
                     {person.avatar && (
-                      <Image
-                        src={getAvatarSrc(person.avatar)}
+                      <img
+                        src={person.avatar}
                         alt={person.name}
                         width={20}
                         height={20}

@@ -1,5 +1,5 @@
 import { getCollection, render, type CollectionEntry } from 'astro:content'
-import { readingTime, calculateWordCountFromHtml } from '@/lib/utils'
+import { readingTime, calculateWordCountFromHtml, getAvatarSrc } from '@/lib/utils'
 
 export async function getAllPeople(): Promise<CollectionEntry<'people'>[]> {
   return await getCollection('people')
@@ -197,7 +197,7 @@ export async function parsePeople(personIds: string[] = []) {
     return {
       id,
       name: person?.data?.name || id,
-      avatar: person?.data?.avatar || '/static/icon-light.png',
+      avatar: getAvatarSrc(person?.data?.avatar) || '/static/icon-light.png',
       isRegistered: !!person,
     }
   })
