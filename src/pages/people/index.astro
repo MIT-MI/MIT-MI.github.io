@@ -4,8 +4,21 @@ import PageHead from '@/components/PageHead.astro'
 import Layout from '@/layouts/Layout.astro'
 import { PeopleGrid } from '@/components/PeopleGrid'
 import { getAllPeople } from '@/lib/data-utils'
+import { getImage } from 'astro:assets'
 
-const people = await getAllPeople()
+const rawPeople = await getAllPeople()
+
+const people = await Promise.all(
+  rawPeople.map(async (person) => ({
+    ...person,
+    data: {
+      ...person.data,
+      avatar: person.data.avatar
+        ? (await getImage({ src: person.data.avatar, width: 256, height: 256 })).src
+        : undefined,
+    },
+  }))
+)
 ---
 
 <Layout class="">

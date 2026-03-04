@@ -63,7 +63,7 @@ export function PersonCard({
       <div className="bg-background overflow-hidden rounded-xl border p-4 transition-shadow duration-300 ease-in-out hover:cursor-pointer hover:ring-2">
         <div className="flex flex-wrap gap-4">
           <AvatarComponent
-            src={getAvatarSrc(avatar) || '/static/avatar-fallback.png'}
+            src={getAvatarSrc(avatar)}
             alt={`Avatar of ${name}`}
             fallback={name[0]}
             className={cn(

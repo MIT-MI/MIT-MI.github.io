@@ -10,13 +10,25 @@ import Layout from '@/layouts/Layout.astro'
 import { getAllPeople, getAllProjects, getRecentPosts } from '@/lib/data-utils'
 import ImageCarousel from '@/components/ui/image-carousel'
 import { getCollection } from 'astro:content'
+import { getImage } from 'astro:assets'
 
 const blog = await getRecentPosts(SITE.featuredPostCount)
-const people = await getAllPeople()
+const rawPeople = await getAllPeople()
 const projects = await getAllProjects()
 const groupPhotos = await getCollection('groupPhotos')
----
 
+const people = await Promise.all(
+  rawPeople.map(async (person) => ({
+    ...person,
+    data: {
+      ...person.data,
+      avatar: person.data.avatar
+        ? (await getImage({ src: person.data.avatar, width: 128, height: 128 })).src
+        : undefined,
+    },
+  }))
+)
+---
 <Layout class="lg:overflow-hidden lg:-m-1 py-1">
   <PageHead slot="head" title="Home" />
   <div class="grid grid-cols-1 gap-4 lg:grid-cols-[1.2fr_1fr] lg:h-full lg:min-h-0 overflow-y-visible">
