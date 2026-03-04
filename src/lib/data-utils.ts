@@ -1,4 +1,5 @@
 import { getCollection, render, type CollectionEntry } from 'astro:content'
+import { getImage } from 'astro:assets'
 import { readingTime, calculateWordCountFromHtml, getAvatarSrc } from '@/lib/utils'
 
 export async function getAllPeople(): Promise<CollectionEntry<'people'>[]> {
@@ -186,21 +187,33 @@ export async function getParentPost(
   return allPosts.find((post) => post.id === parentId) || null
 }
 
-export async function parsePeople(personIds: string[] = []) {
+export async function parsePeople(personIds: string[] = [], avatarSize?: number) {
   if (!personIds.length) return []
 
   const allPeople = await getAllPeople()
   const personMap = new Map(allPeople.map((person) => [person.id, person]))
 
-  return personIds.map((id) => {
-    const person = personMap.get(id)
-    return {
-      id,
-      name: person?.data?.name || id,
-      avatar: getAvatarSrc(person?.data?.avatar) || '/static/icon-light.png',
-      isRegistered: !!person,
-    }
-  })
+  return Promise.all(
+    personIds.map(async (id) => {
+      const person = personMap.get(id)
+      const rawAvatar = person?.data?.avatar
+
+      let avatar: string
+      if (rawAvatar && avatarSize) {
+        const optimized = await getImage({ src: rawAvatar, width: avatarSize, height: avatarSize })
+        avatar = optimized.src
+      } else {
+        avatar = getAvatarSrc(rawAvatar) || '/static/icon-light.png'
+      }
+
+      return {
+        id,
+        name: person?.data?.name || id,
+        avatar,
+        isRegistered: !!person,
+      }
+    })
+  )
 }
 
 export async function getPostById(

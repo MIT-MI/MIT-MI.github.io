@@ -8,7 +8,7 @@ import {
   isSubpost,
   parsePeople,
 } from '@/lib/data-utils'
-import { formatDate, getAvatarSrc } from '@/lib/utils'
+import { formatDate } from '@/lib/utils'
 import { Icon } from 'astro-icon/components'
 import { Image } from 'astro:assets'
 import type { CollectionEntry } from 'astro:content'
@@ -21,7 +21,7 @@ interface Props {
 const { entry } = Astro.props
 const formattedDate = formatDate(entry.data.date)
 const readTime = await getCombinedReadingTime(entry.id)
-const people = await parsePeople(entry.data.people ?? [])
+const people = await parsePeople(entry.data.people ?? [], 40)
 const subpostCount = !isSubpost(entry.id) ? await getSubpostCount(entry.id) : 0
 ---
 
@@ -61,7 +61,7 @@ const subpostCount = !isSubpost(entry.id) ? await getSubpostCount(entry.id) : 0
                 <div class="flex items-center gap-x-1.5">
                   <AvatarComponent
                     client:load
-                    src={getAvatarSrc(person.avatar)}
+                    src={person.avatar}
                     alt={person.name}
                     fallback={person.name[0]}
                     className="size-5 rounded-full"
