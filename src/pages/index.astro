@@ -15,7 +15,7 @@ import { getImage } from 'astro:assets'
 const blog = await getRecentPosts(SITE.featuredPostCount)
 const rawPeople = await getAllPeople()
 const projects = await getAllProjects()
-const groupPhotos = await getCollection('groupPhotos')
+const rawGroupPhotos = await getCollection('groupPhotos')
 
 const people = await Promise.all(
   rawPeople.map(async (person) => ({
@@ -25,6 +25,16 @@ const people = await Promise.all(
       avatar: person.data.avatar
         ? (await getImage({ src: person.data.avatar, width: 128, height: 128 })).src
         : undefined,
+    },
+  }))
+)
+
+const groupPhotos = await Promise.all(
+  rawGroupPhotos.map(async (photo) => ({
+    ...photo,
+    data: {
+      ...photo.data,
+      image: (await getImage({ src: photo.data.image, height: 600 })).src,
     },
   }))
 )
@@ -85,7 +95,7 @@ const people = await Promise.all(
           </Link>
         </div>
         <div class="flex-1 min-h-0 rounded-lg border p-4 bg-background">
-          <PeopleAvatarGrid client:load people={people} className="h-full" shuffle={true} />
+          <PeopleAvatarGrid client:only="react" people={people} className="h-full" shuffle={true} />
         </div>
       </section>
       <section class="flex flex-col gap-1">
