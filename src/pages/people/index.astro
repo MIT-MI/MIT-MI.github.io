@@ -2,14 +2,14 @@
 import Breadcrumbs from '@/components/Breadcrumbs.astro'
 import PageHead from '@/components/PageHead.astro'
 import Layout from '@/layouts/Layout.astro'
-import { PeopleList } from '@/components/PeopleList'
+import { PeopleGrid } from '@/components/PeopleGrid'
 import { getAllPeople } from '@/lib/data-utils'
 
 const people = await getAllPeople()
 ---
 
-<Layout class="max-w-3xl">
+<Layout class="">
   <PageHead slot="head" title="People" />
   <Breadcrumbs items={[{ label: 'People', icon: 'lucide:users' }]} />
-  <PeopleList client:only="react" people={people} shuffle />
+  <PeopleGrid client:only="react" people={people} shuffle />
 </Layout>
