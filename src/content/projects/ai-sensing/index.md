@@ -2,7 +2,7 @@
 name: "AI for Physical Understanding: Spatial Vision, Touch, Smell, and Taste"
 description: "Intelligent systems that monitor and learn from physical signals on our bodies, in our homes and cities, and in the climate and environment."
 tags: []
-people: [ray, kai, fangneng, marshall]
+people: [ray, kai, fangneng]
 image: "./cover.png"
 ---
 
