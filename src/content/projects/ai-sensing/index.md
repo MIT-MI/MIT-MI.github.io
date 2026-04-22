@@ -24,10 +24,10 @@ Key works:
 
 [OpenTouch: Bringing Full-Hand Touch to Real-World Interaction, arXiv 2025](https://arxiv.org/abs/2512.16842)
 
-[SmellNet: A Large-scale Dataset for Real-world Smell Recognition, arXiv 2025](https://arxiv.org/abs/2506.00239)
+[SmellNet: A Large-scale Dataset for Real-world Smell Recognition, ICLR 2026](https://arxiv.org/abs/2506.00239)
 
 [Schrodinger Audio-Visual Editor: Object-Level Audiovisual Removal, arXiv 2025](https://arxiv.org/abs/2512.12875)
 
-[Page-4D: Disentangled Pose and Geometry Estimation for 4D Perception, arXiv 2025](https://arxiv.org/abs/2510.17568)
+[Page-4D: Disentangled Pose and Geometry Estimation for 4D Perception, ICLR 2026](https://arxiv.org/abs/2510.17568)
 
 [Fits like a Flex-Glove: Automatic Design of Personalized FPCB-Based Tactile Sensing Gloves, CHI 2025 Late-Breaking Work](https://dl.acm.org/doi/abs/10.1145/3706599.3720147)
