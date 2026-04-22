@@ -14,13 +14,13 @@ Today, we are particularly interested in foundation models bridging discrete tex
 
 Key works:
 
-[MEM1: Learning to Synergize Memory and Reasoning for Efficient Long-Horizon Agents, arXiv 2025](https://arxiv.org/abs/2506.15841)
+[MEM1: Learning to Synergize Memory and Reasoning for Efficient Long-Horizon Agents, ICLR 2026](https://arxiv.org/abs/2506.15841)
 
 ![Alt Text](./../../publications/images/mem1.gif)
 
-[PuzzleWorld: A Benchmark for Multimodal, Open-Ended Reasoning in Puzzlehunts, arXiv 2025](https://arxiv.org/abs/2506.06211)
+[PuzzleWorld: A Benchmark for Multimodal, Open-Ended Reasoning in Puzzlehunts, ICLR 2026](https://arxiv.org/abs/2506.06211)
 
-[Guiding Mixture-of-Experts with Temporal Multimodal Interactions, arXiv 2025](https://arxiv.org/abs/2509.25678)
+[Guiding Mixture-of-Experts with Temporal Multimodal Interactions, ICLR 2026](https://arxiv.org/abs/2509.25678)
 
 [MINT: Multimodal Instruction Tuning with Multimodal Interaction Grouping, arXiv 2025](https://arxiv.org/abs/2506.02308)
 
