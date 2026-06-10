@@ -1,6 +1,6 @@
 coral:
   title: "CORAL: Towards Autonomous Multi-Agent Evolution for Open-Ended Discovery"
-  date: 2026
+  date: 2026-8
   authors:
     - Ao Qu
     - Han Zheng
@@ -24,7 +24,7 @@ coral:
 
 iha:
   title: "Interleaved Head Attention"
-  date: 2026
+  date: 2026-8
   authors:
     - Sai Surya Duvvuri
     - Chanakya Ekbote
@@ -41,7 +41,7 @@ iha:
 
 aromagen:
   title: "AromaGen: Interactive Generation of Rich Olfactory Experiences with Multimodal Language Models"
-  date: 2026
+  date: 2026-8
   authors:
     - Yunge Wen
     - Awu Chen
@@ -55,7 +55,7 @@ aromagen:
 
 opentouch:
   title: "OpenTouch: Bringing Full-Hand Touch to Real-World Interaction"
-  date: 2026
+  date: 2026-8
   authors:
     - Ray Song
     - Jinzhou Li
