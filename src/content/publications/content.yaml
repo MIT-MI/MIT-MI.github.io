@@ -297,34 +297,6 @@ regen:
   link: https://arxiv.org/abs/2505.18880
   image: "./images/regen.png"
 
-fairgrpo:
-  title: "FairGRPO: Towards Fair Reasoning Foundation Models for Clinical Diagnosis"
-  date: 2025-12
-  authors: 
-  - Shiqi Dai
-  - David Dai
-  - Jiaee Cheong
-  - Paul Pu Liang
-  journal: "arXiv preprint"
-  link: https://arxiv.org/abs/2510.19893
-  image: "./images/fairgrpo.png"
-
-learn-globally-speak-locally:
-  title: "Learn Globally, Speak Locally: Bridging the Gaps in Multilingual Reasoning"
-  date: 2025-07
-  authors: 
-  - Jaedong Hwang
-  - Kumar Tanmay
-  - Seok-Jin Lee
-  - Ayush Agrawal
-  - Hamid Palangi
-  - Kumar Ayush
-  - Ila Fiete
-  - Paul Pu Liang
-  journal: "arXiv preprint"
-  link: https://arxiv.org/abs/2507.05418
-  image: "./images/multilingual.png"
-
 climb:
   title: "CLIMB: Data Foundations for Large Scale Multimodal Clinical Foundation Models"
   date: 2025-07
