@@ -2,7 +2,7 @@
 name: "Socially-Intelligent AI"
 description: "Intelligent agents that can comprehend and interact with humans in long-term multi-party social situations, fostering collaboration and growth in social relationships, while maintaining privacy, safety, and fairness for trusted interaction."
 tags: []
-people: [keane, megan, anku, ao, edgar, jada]
+people: [keane, megan, anku, ao]
 image: "./cover.png"
 ---
 
