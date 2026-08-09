@@ -18,7 +18,7 @@ coral:
     - Bryan Kian Hsiang Low
     - Jinhua Zhao
     - Paul Pu Liang
-  journal: "arXiv preprint"
+  journal: "COLM 2026"
   link: https://arxiv.org/abs/2604.01658
   image: "./images/coral.png"
 
@@ -36,7 +36,7 @@ iha:
     - Inderjit Dhillon
     - Manzil Zaheer
   journal: "arXiv preprint"
-  link: https://arxiv.org/abs/2512.16842
+  link: https://arxiv.org/abs/2602.21371
   image: "./images/iha.png"
 
 aromagen:
